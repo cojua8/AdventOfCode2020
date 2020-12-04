@@ -1,0 +1,16 @@
+D:\Documents\Codigo\AdventOfCode\C#\AdventOfCode\bin\Debug\net5.0\AdventOfCode.exe
+D:\Documents\Codigo\AdventOfCode\C#\AdventOfCode\bin\Debug\net5.0\AdventOfCode.deps.json
+D:\Documents\Codigo\AdventOfCode\C#\AdventOfCode\bin\Debug\net5.0\AdventOfCode.runtimeconfig.json
+D:\Documents\Codigo\AdventOfCode\C#\AdventOfCode\bin\Debug\net5.0\AdventOfCode.runtimeconfig.dev.json
+D:\Documents\Codigo\AdventOfCode\C#\AdventOfCode\bin\Debug\net5.0\AdventOfCode.dll
+D:\Documents\Codigo\AdventOfCode\C#\AdventOfCode\bin\Debug\net5.0\ref\AdventOfCode.dll
+D:\Documents\Codigo\AdventOfCode\C#\AdventOfCode\bin\Debug\net5.0\AdventOfCode.pdb
+D:\Documents\Codigo\AdventOfCode\C#\AdventOfCode\obj\Debug\net5.0\AdventOfCode.csprojAssemblyReference.cache
+D:\Documents\Codigo\AdventOfCode\C#\AdventOfCode\obj\Debug\net5.0\AdventOfCode.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documents\Codigo\AdventOfCode\C#\AdventOfCode\obj\Debug\net5.0\AdventOfCode.AssemblyInfoInputs.cache
+D:\Documents\Codigo\AdventOfCode\C#\AdventOfCode\obj\Debug\net5.0\AdventOfCode.AssemblyInfo.cs
+D:\Documents\Codigo\AdventOfCode\C#\AdventOfCode\obj\Debug\net5.0\AdventOfCode.csproj.CoreCompileInputs.cache
+D:\Documents\Codigo\AdventOfCode\C#\AdventOfCode\obj\Debug\net5.0\AdventOfCode.dll
+D:\Documents\Codigo\AdventOfCode\C#\AdventOfCode\obj\Debug\net5.0\ref\AdventOfCode.dll
+D:\Documents\Codigo\AdventOfCode\C#\AdventOfCode\obj\Debug\net5.0\AdventOfCode.pdb
+D:\Documents\Codigo\AdventOfCode\C#\AdventOfCode\obj\Debug\net5.0\AdventOfCode.genruntimeconfig.cache
