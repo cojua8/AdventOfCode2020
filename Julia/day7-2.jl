@@ -31,7 +31,10 @@ function contains_color(bag::Dict{AbstractString,Integer},
         return true
     else
         for bag_color in keys(bag)
-            has_color_dict[bag_color] = contains_color(b.colors_dict[bag_color], color, has_color_dict, b)
+            if !haskey(has_color_dict, bag_color)
+                has_color_dict[bag_color] = contains_color(b.colors_dict[bag_color], color, has_color_dict, b)
+            end
+
             if has_color_dict[bag_color]
                 return true
             end
@@ -55,7 +58,10 @@ function contained(bag::Dict{AbstractString,Integer},
     else
         count = 1 # the bag itself
         for bag_color in keys(bag)
-            total_contained_dict[bag_color] = contained(bags.colors_dict[bag_color], total_contained_dict, bags)
+            if !haskey(total_contained_dict, bag_color)
+                total_contained_dict[bag_color] = contained(bags.colors_dict[bag_color], total_contained_dict, bags)
+            end
+
             count += bag[bag_color] * total_contained_dict[bag_color]
         end
         return count
@@ -91,7 +97,7 @@ function main()
         return bags
     end
 
-    total_contained(bags, "shiny gold")
+    return total_contained(bags, "shiny gold")
 end
 
-main()
+@btime main()

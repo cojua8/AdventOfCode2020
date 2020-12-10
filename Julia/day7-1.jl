@@ -1,10 +1,10 @@
 struct Bags
-    colors_dict::Dict{String,Dict{String,Integer}}
+    colors_dict::Dict{AbstractString,Dict{AbstractString,Integer}}
 end
-Bags() = Bags(Dict{String,Dict{String,Integer}}())
+Bags() = Bags(Dict{AbstractString,Dict{AbstractString,Integer}}())
 
 function add_bag_color!(b::Bags, color::AbstractString,
-    contained_colors::Dict{String,Integer})
+    contained_colors::Dict{AbstractString,Integer})
     b.colors_dict[color] = contained_colors
 end
 
@@ -31,7 +31,10 @@ function contains_color(bag::Dict{AbstractString,Integer},
         return true
     else
         for bag_color in keys(bag)
-            has_color_dict[bag_color] = contains_color(b.colors_dict[bag_color], color, has_color_dict, b)
+            if !haskey(has_color_dict, bag_color)
+                has_color_dict[bag_color] = contains_color(b.colors_dict[bag_color], color, has_color_dict, b)
+            end
+
             if has_color_dict[bag_color]
                 return true
             end
@@ -45,7 +48,7 @@ function process_line(line::AbstractString)
     container_re = r"^(\D*) bags contain (.*|no other bags).$"
     container_bag, contained_bags = match(container_re, line).captures
 
-    contained_bags_dict = Dict{String,Integer}()
+    contained_bags_dict = Dict{AbstractString,Integer}()
     if contained_bags != "no other bags"
         contained_re = r"(\d*) (\D*) (?:bags|bag)"
 
@@ -72,4 +75,4 @@ function main()
     return contains_color_count(bags, "shiny gold")
 end
 
-main()
+@btime main()
