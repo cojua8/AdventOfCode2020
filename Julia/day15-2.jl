@@ -22,12 +22,27 @@ function memory_game(starter_numbers::Vector{<:Integer}, final_turn::Integer)
 end
 
 
+function memory_game_reddit(start::Vector{<:Integer}, target::Integer)
+    numbers = zeros(Int, target)
+    for (i, n) in enumerate(start[1:end - 1])
+      numbers[n + 1] = i
+    end
+    turn = length(start)
+    number = start[end]
+    for turn = length(start):target - 1
+      next = numbers[number + 1] == 0 ? 0 : turn - numbers[number + 1]
+      numbers[number + 1] = turn
+      number = next
+    end
+    number
+  end
+
+
 function main()
     starter_string = read("Recursos/day15-input.txt", String)
 
     starter_numbers = parse.(Int, split(starter_string, ","))
 
-    memory_game(starter_numbers, 30000000)
+    # memory_game(starter_numbers, 30000000)
+    memory_game_reddit(starter_numbers, 30000000)
 end
-
-main()
